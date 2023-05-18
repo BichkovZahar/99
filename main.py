@@ -20,3 +20,8 @@ for num in my_iter:
     print(num)
 
 
+def my_generator(data):
+    for item in data:
+        yield item
+for num in my_generator(lst):
+    print(num)
