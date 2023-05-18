@@ -25,3 +25,19 @@ def my_generator(data):
         yield item
 for num in my_generator(lst):
     print(num)
+
+def calc():
+    def add(a , b):
+        return a + b
+    def sub(a , b):
+        return a - b
+    def mult(a , b):
+        return a * b
+    def div(a , b):
+        if b != 0:
+          return a / b
+        else:
+            raise ValueError("Помилка! Ділення на нуль!")
+    return add , sub , mult , div
+add, sub, mult, div = calc()
+print(div(3 , 1))
